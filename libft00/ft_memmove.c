@@ -6,12 +6,11 @@
 /*   By: ifujimot <k41fujimoto@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 09:26:15 by ifujimot          #+#    #+#             */
-/*   Updated: 2022/12/16 22:05:51 by tkomeno          ###   ########.fr       */
+/*   Updated: 2022/12/16 22:09:08 by tkomeno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

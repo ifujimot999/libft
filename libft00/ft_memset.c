@@ -6,12 +6,11 @@
 /*   By: ifujimot <k41fujimoto@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 12:33:20 by ifujimot          #+#    #+#             */
-/*   Updated: 2022/12/16 22:05:52 by tkomeno          ###   ########.fr       */
+/*   Updated: 2022/12/16 22:09:11 by tkomeno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memset(void *buf, int ch, size_t n)
 {
