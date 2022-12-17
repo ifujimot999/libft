@@ -6,7 +6,7 @@
 /*   By: ifujimot <k41fujimoto@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 11:19:30 by ifujimot          #+#    #+#             */
-/*   Updated: 2022/11/02 12:36:50 by ifujimot         ###   ########.fr       */
+/*   Updated: 2022/12/16 21:41:03 by tkomeno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,4 @@
 int	ft_isdigit(int c)
 {
 	return ('0' <= c && c <= '9');
-}
-
-int	main(void)
-{
-	char	c = '8';
-
-	printf("%d", ft_isdigit(c));
-	return (0);
 }

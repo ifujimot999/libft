@@ -6,7 +6,7 @@
 /*   By: ifujimot <k41fujimoto@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 15:32:38 by ifujimot          #+#    #+#             */
-/*   Updated: 2022/11/02 12:28:28 by ifujimot         ###   ########.fr       */
+/*   Updated: 2022/12/16 21:51:00 by tkomeno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,4 @@ size_t	ft_strlen(const char *str)
 		i++;
 	}
 	return (i);
-}
-
-int	main(void)
-{
-	char	*str;
-	int	answer;
-
-	str = "おはよう";
-	answer = ft_strlen(str);
-	printf("%d", answer);
-	return (0);
 }

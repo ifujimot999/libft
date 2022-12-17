@@ -6,7 +6,7 @@
 /*   By: ifujimot <k41fujimoto@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 15:25:18 by ifujimot          #+#    #+#             */
-/*   Updated: 2022/11/02 12:36:30 by ifujimot         ###   ########.fr       */
+/*   Updated: 2022/12/16 21:41:10 by tkomeno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,4 @@
 int	ft_isprint(int c)
 {
 	return (32 <= c && c <= 126);
-}
-
-int	main(void)
-{
-	char	c = 0;
-
-	printf("%d", ft_isprint(c));
-	return (0);
 }

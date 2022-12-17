@@ -6,7 +6,7 @@
 /*   By: ifujimot <k41fujimoto@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 15:07:17 by ifujimot          #+#    #+#             */
-/*   Updated: 2022/11/02 12:39:06 by ifujimot         ###   ########.fr       */
+/*   Updated: 2022/12/16 21:40:45 by tkomeno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,6 @@
 
 int	ft_isalnum(int c)
 {
-	return ( '0' <= c && c <= '9' || 'A' <= c && c <= 'Z' || 'a' <= c && c <= 'z');
-}
-
-int	main(void)
-{
-	char	c = '!';
-
-	printf("%d", ft_isalnum(c));
-	return (0);
+	return ('0' <= c && c <= '9' || 'A' <= c && c <= 'Z' || 'a' <= c
+		&& c <= 'z');
 }

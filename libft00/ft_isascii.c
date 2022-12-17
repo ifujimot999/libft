@@ -6,7 +6,7 @@
 /*   By: ifujimot <k41fujimoto@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 15:12:51 by ifujimot          #+#    #+#             */
-/*   Updated: 2022/11/02 12:37:05 by ifujimot         ###   ########.fr       */
+/*   Updated: 2022/12/16 21:40:59 by tkomeno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,4 @@
 int	ft_isascii(int c)
 {
 	return (0 <= c && c <= 127);
-}
-
-int	main(void)
-{
-	int	c = 'あ';
-
-	printf("%d", ft_isascii(c));
-	return (0);
 }

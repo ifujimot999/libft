@@ -6,13 +6,14 @@
 /*   By: ifujimot <k41fujimoto@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 09:39:53 by ifujimot          #+#    #+#             */
-/*   Updated: 2022/11/02 12:32:54 by ifujimot         ###   ########.fr       */
+/*   Updated: 2022/12/16 22:02:05 by tkomeno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <string.h>
 
-size_t	ft_strlen(const char *str)
+static size_t	ft_strlen(const char *str)
 {
 	int	i;
 
@@ -30,32 +31,22 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	len_src;
 	size_t	i;
 
-	len_dst = ft_strlen(dst);
 	len_src = ft_strlen(src);
-	i = 0;
+	if (dst == NULL && dstsize == 0)
+		return (len_src);
+	len_dst = ft_strlen(dst);
 	if (!dstsize)
 		return (len_src);
-	while (src[i] && len_dst + i < dstsize -1)
+	if (len_dst < dstsize)
 	{
-		dst[len_dst + i] = src[i];
-		i++;
+		i = 0;
+		while (src[i] && len_dst + i < dstsize -1)
+		{
+			dst[len_dst + i] = src[i];
+			i++;
+		}
+		dst[len_dst + i] = '\0';
+		return (len_dst + len_src);
 	}
-	dst[len_dst + i] = '\0';
-	if (len_dst > dstsize)
-		return (len_src + dstsize);
-	return (len_dst + len_src);
+	return (len_src + dstsize);
 }
-
-int	main(void)
-{
-	char	str[126] = "HappyBirthday";
-	char	str1[] = "NiceDay";
-	int	result;
-
-	result = ft_strlcat(str, str1, 5);
-	printf("%d\n", result);
-	return (0);
-}
-
-//constは変数を定数として扱う。
-//constが付くと変数は書き換えができなくなり、読み取り専用となります。値を変更しようとするとコンパイルエラーが発生します。

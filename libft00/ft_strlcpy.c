@@ -6,11 +6,23 @@
 /*   By: ifujimot <k41fujimoto@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 09:45:22 by ifujimot          #+#    #+#             */
-/*   Updated: 2022/11/02 12:29:30 by ifujimot         ###   ########.fr       */
+/*   Updated: 2022/12/16 21:50:43 by tkomeno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+
+static size_t	ft_strlen(const char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
@@ -24,15 +36,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		dst[i] = src[i];
 		i++;
 	}
-	return (*dst);
-}
-
-int	main(void)
-{
-	char	str[125] = "GoodMorning";
-	char	str2[] = "NiceDay";
-
-	ft_strlcpy(str, str2, 4);
-	printf("%s\n", str);
-	return (0);
+	dst[i] = '\0';
+	return (ft_strlen(src));
 }
