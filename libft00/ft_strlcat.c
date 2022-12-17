@@ -6,7 +6,7 @@
 /*   By: ifujimot <k41fujimoto@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 09:39:53 by ifujimot          #+#    #+#             */
-/*   Updated: 2022/12/16 22:02:05 by tkomeno          ###   ########.fr       */
+/*   Updated: 2022/12/16 22:05:53 by tkomeno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	if (len_dst < dstsize)
 	{
 		i = 0;
-		while (src[i] && len_dst + i < dstsize -1)
+		while (src[i] && len_dst + i < dstsize - 1)
 		{
 			dst[len_dst + i] = src[i];
 			i++;
