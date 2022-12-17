@@ -6,7 +6,7 @@
 /*   By: ifujimot <k41fujimoto@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 09:45:22 by ifujimot          #+#    #+#             */
-/*   Updated: 2022/12/16 22:11:58 by tkomeno          ###   ########.fr       */
+/*   Updated: 2022/12/16 22:43:45 by tkomeno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,19 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	int		i;
+	size_t	i;
 	size_t	n;
 
-	n = dstsize - 1;
-	i = 0;
-	while (i < n)
+	if (dstsize)
 	{
-		dst[i] = src[i];
-		i++;
+		n = dstsize - 1;
+		i = 0;
+		while (src[i] && i < n)
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
 	}
-	dst[i] = '\0';
 	return (ft_strlen(src));
 }
